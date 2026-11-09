@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="All 54 Singapore parks on one map: click a park to see its most frequent review words as a pie chart and the word cloud built from its Google Maps reviews.">
+  <title>Park Voices · 54 Singapore Parks</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="atlas" id="atlas">
+    <main class="map-stage">
+      <div id="map" aria-label="Map of the 54 Singapore parks with review word frequency"></div>
+
+      <section class="panel title-panel" aria-label="About this map">
+        <span class="eyebrow">SINGAPORE · DEP5118 · 54 PARKS</span>
+        <h1>Park voices<span class="dot">.</span></h1>
+        <p>Click a park boundary to open its review vocabulary: the ten most frequent words and the word cloud built
+          from the same collected Google Maps reviews.</p>
+      </section>
+
+      <section class="panel filter-panel" aria-label="Filters">
+        <div class="filter-title">Park category</div>
+        <div class="button-group" id="category-buttons"></div>
+        <div class="filter-title">Find a park</div>
+        <label class="select-wrap">
+          <span class="sr-only">Choose a park</span>
+          <select id="park-select"></select>
+        </label>
+      </section>
+
+      <section class="panel legend" id="legend" aria-label="Legend">
+        <div class="legend-title">Category</div>
+        <div id="legend-items"></div>
+        <div class="legend-note">Areas in green are the 54 parks. P51 has no boundary and is shown as a point.</div>
+      </section>
+
+      <div class="map-tools">
+        <button id="reset-view" type="button" title="Show all of Singapore" aria-label="Show all of Singapore">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9Z"/><circle cx="12" cy="12" r="2"/></svg>
+        </button>
+        <button id="fullscreen" type="button" title="Fullscreen" aria-label="Enter fullscreen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg>
+        </button>
+      </div>
+
+      <div class="map-credit">Boundaries: OSM park polygons / NParks · Word frequency: collected Google Maps reviews</div>
+      <div class="map-status" id="map-status" role="status" aria-live="polite"></div>
+
+      <aside class="detail" id="detail" hidden aria-label="Park detail">
+        <button class="detail-close" id="detail-close" type="button" aria-label="Close park detail">×</button>
+        <div class="detail-scroll">
+          <div class="detail-head">
+            <span class="detail-id" id="detail-id">P01</span>
+            <h2 id="detail-name">Park</h2>
+            <p class="detail-cat" id="detail-cat"></p>
+            <p class="detail-stats" id="detail-stats"></p>
+          </div>
+
+          <figure class="detail-cloud" id="detail-cloud">
+            <img id="detail-cloud-img" alt="" loading="lazy">
+            <figcaption>Word cloud built from this park's collected review text.</figcaption>
+          </figure>
+
+          <div class="detail-chart" id="detail-chart">
+            <div class="chart-head">
+              <h3>Most frequent words</h3>
+              <span id="detail-total"></span>
+            </div>
+            <div class="chart-body">
+              <svg id="detail-pie" viewBox="0 0 300 300" role="img" aria-labelledby="detail-pie-title">
+                <title id="detail-pie-title">Pie chart of the ten most frequent words</title>
+              </svg>
+              <ol class="pie-legend" id="detail-legend"></ol>
+            </div>
+            <p class="detail-note" id="detail-note">Top 10 words, with every remaining term summed as
+              <b>Others</b>. Shares use all counted mentions, so the slices total 100%.
+            </p>
+          </div>
+
+          <p class="detail-empty" id="detail-empty" hidden>No reviews were collected for this park, so there is no
+            word frequency or word cloud.</p>
+
+          <p class="detail-source">Frequency counts terms in the sampled review text. Size is not sentiment —
+            “crowded” and “peaceful” are both just counts. Reviews are self-selected and unevenly distributed between
+            parks.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+  <script src="../embed-host.js"></script>
+</body>
+
+</html>

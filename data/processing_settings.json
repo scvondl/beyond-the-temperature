@@ -1,0 +1,158 @@
+{
+  "config": {
+    "version": "1.0.0",
+    "gee_project": "ee-shawnchi2003",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "crs": "EPSG:3414",
+    "scale_m": 20,
+    "tile_pixels": 512,
+    "recovery_min_tile_pixels": 16,
+    "boundary": "E:\\Shawn File\\Graduate\\Semester 3\\DEP5118\\Project\\SG_Island_Indices_v1_0_0\\SG_Island_Indices_v1_0_0\\inputs\\MasterPlan2025PlanningAreaBoundaryNoSea.geojson",
+    "scoring_parameters": "E:\\Shawn File\\Graduate\\Semester 3\\DEP5118\\Project\\SG_Island_Indices_v1_0_0\\SG_Island_Indices_v1_0_0\\inputs\\park_scoring_parameters.json",
+    "clear_threshold": 0.6,
+    "min_clear_days_quarter": 3,
+    "min_quarters_year": 3,
+    "min_years": 3,
+    "mndwi_water_threshold": 0,
+    "water_ndvi_max": 0.2,
+    "annual_water_frequency": 0.5,
+    "keep_intermediates": false,
+    "export_low_support": true,
+    "make_storymap": true,
+    "preview_max_pixels": 3600,
+    "output_dir": "E:\\Shawn File\\Graduate\\Semester 3\\DEP5118\\Project\\SG_Island_Indices_v1_0_0\\SG_Island_Indices_v1_0_0\\output_sg_island_2021_2025",
+    "redraw_only": false
+  },
+  "signature": "5e3743aa3d05d26ed7056f2987bdaa0b4e00f8d58db11a7f402cf0ed3c3b110e",
+  "grid": {
+    "width": 2688,
+    "height": 1726,
+    "col0": 133,
+    "row0": -2513,
+    "transform": [
+      20.0,
+      0.0,
+      2660.0,
+      0.0,
+      -20.0,
+      50260.0
+    ],
+    "tiles": [
+      [
+        133,
+        -2513,
+        512,
+        512
+      ],
+      [
+        645,
+        -2513,
+        512,
+        512
+      ],
+      [
+        1157,
+        -2513,
+        512,
+        512
+      ],
+      [
+        1669,
+        -2513,
+        512,
+        512
+      ],
+      [
+        2181,
+        -2513,
+        512,
+        512
+      ],
+      [
+        2693,
+        -2513,
+        128,
+        512
+      ],
+      [
+        133,
+        -2001,
+        512,
+        512
+      ],
+      [
+        645,
+        -2001,
+        512,
+        512
+      ],
+      [
+        1157,
+        -2001,
+        512,
+        512
+      ],
+      [
+        1669,
+        -2001,
+        512,
+        512
+      ],
+      [
+        2181,
+        -2001,
+        512,
+        512
+      ],
+      [
+        2693,
+        -2001,
+        128,
+        512
+      ],
+      [
+        133,
+        -1489,
+        512,
+        512
+      ],
+      [
+        645,
+        -1489,
+        512,
+        512
+      ],
+      [
+        1157,
+        -1489,
+        512,
+        512
+      ],
+      [
+        1669,
+        -1489,
+        512,
+        512
+      ],
+      [
+        645,
+        -977,
+        512,
+        190
+      ]
+    ],
+    "boundary_features": 55,
+    "repaired_features": 0,
+    "boundary_projected_area_km2": 796.9119798338567
+  },
+  "pixel_support_rule": "at least 3 clear days/quarter; 3 quarters/year; 3 land years",
+  "park_area_gate": "not applicable to pixels; park-level 80% and 1200 m2 gates are not raster gates",
+  "vbs_raw": "original fixed park-reference formula; may be outside 0-100 at pixel scale",
+  "vbs_display": "clip final raw score to 0-100 for map display; source NDVI/NDBI unchanged"
+}

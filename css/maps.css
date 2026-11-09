@@ -1,0 +1,109 @@
+/* Interactive maps inherit the framework's colours and remain self-contained. */
+html { scroll-padding-top: 100px; }
+.viz-header { align-items: center; gap: 16px; }
+.viz-status { color: #536945; font-size: 9px; letter-spacing: .08em; }
+.map-story { grid-template-columns: 1.1fr 1fr; gap: 42px; align-items: start; }
+.map-story h3 { font-size: clamp(34px, 3.2vw, 51px); }
+.map-reading { padding-top: 3px; }
+.map-reading .viz-takeaway { margin: 22px 0 16px; }
+.map-guide {
+  margin-top: 22px;
+  padding: 20px clamp(16px, 3vw, 28px) 6px;
+  border-top: 2px solid #78917a;
+  background: #eef2e9;
+  color: #223f34;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.map-guide h4 {
+  margin: 0;
+  font: 400 clamp(23px, 2.5vw, 30px)/1.15 "DM Serif Display", Georgia, serif;
+}
+.map-guide-hint { margin: 8px 0 16px; }
+.map-guide-layers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 0;
+}
+.map-guide-layers-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.map-guide-layers > div { padding-top: 8px; border-top: 1px solid #c9d5c6; }
+.map-guide dt { font-weight: 700; }
+.map-guide dd { margin: 3px 0 0; }
+.map-guide-more { margin-top: 16px; border-top: 1px solid #c9d5c6; }
+.map-guide-more summary { padding: 12px 0; cursor: pointer; font-weight: 700; }
+.map-guide-more summary:focus-visible { outline: 3px solid #73874a; outline-offset: 2px; }
+.map-guide-more .map-guide-layers { margin-bottom: 14px; }
+@media (max-width: 650px) {
+  .map-guide-layers { grid-template-columns: 1fr; }
+}
+.map-embed { margin: 28px 0 0; border: 1px solid #c7d1c3; background: #fff; min-width: 0; }
+.embed-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; background: #edf0e7; border-bottom: 1px solid #c7d1c3; font-size: 10px; font-weight: 700; letter-spacing: .09em; }
+.embed-bar a { font-size: 11px; letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
+.embed-bar a:hover { color: #5a744b; }
+.atlas-frame { display: block; width: 100%; height: 720px; border: 0; background: #eaf0ef; }
+.map-embed figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 14px 18px; border-top: 1px solid #dce2d6; font-size: 11px; line-height: 1.7; color: #61736b; }
+.environment-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; margin-top: 28px; }
+.environment-notes p { font-size: 14px; line-height: 1.8; color: #566b5f; margin: 10px 0 0; }
+.detail-map { margin-top: 0; }
+.map-close { display: none; border: 1px solid #a9b6a0; padding: 7px 11px; background: #f7f7f0; color: #233e36; cursor: pointer; font: inherit; letter-spacing: 0; }
+.map-is-expanded { overflow: hidden; }
+.map-embed.is-expanded { position: fixed; inset: 0; z-index: 1000; width: 100% !important; height: 100dvh; margin: 0 !important; border: 0; display: flex; flex-direction: column; }
+.map-embed.is-expanded .embed-bar { flex-shrink: 0; }
+.map-embed.is-expanded .atlas-frame { flex: 1; min-height: 0; height: 100%; }
+.map-embed.is-expanded figcaption { display: none; }
+.map-embed.is-expanded .map-close { display: inline-block; }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid #73874a; outline-offset: 4px; }
+@media (max-width: 850px) {
+  .map-story, .environment-notes { grid-template-columns: 1fr; gap: 18px; }
+  .map-reading .viz-takeaway { margin-top: 15px; }
+  .atlas-frame { height: 690px; }
+  .interactive-viz .map-embed { margin: 24px -20px 0; width: calc(100% + 40px); border-left: 0; border-right: 0; }
+}
+@media (max-width: 600px) {
+  .chapter.section { padding-left: 0; padding-right: 0; }
+  .chapter > .section-number, .chapter > h2, .chapter > .section-sub { margin-left: 6vw; margin-right: 6vw; }
+  .chapter .viz { padding-left: 6vw; padding-right: 6vw; border-left: 0; border-right: 0; }
+  .interactive-viz .map-embed { margin-left: -6vw; margin-right: -6vw; width: calc(100% + 12vw); }
+  .atlas-frame { height: 700px; }
+  .embed-bar { padding: 13px 16px; letter-spacing: .05em; }
+  .map-embed figcaption { display: block; padding: 12px 16px; font-size: 10px; }
+  .map-embed figcaption span { display: block; }
+  .map-embed figcaption span + span { margin-top: 5px; }
+  .detail-map { margin-left: -6vw; margin-right: -6vw; width: calc(100% + 12vw); border-left: 0; border-right: 0; }
+  .v03-hero-bottom { flex-wrap: wrap; gap: 12px; line-height: 1.6; }
+  .actions { flex-wrap: wrap; gap: 18px; }
+  .brand { font-size: 10px; }
+  .brandmark { font-size: 23px; margin-right: 5px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* MAP 03 — align the review takeaway with the main heading, and make
+   the introductory paragraph span both columns (other maps unchanged). */
+#park-voices .map-story {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  column-gap: 42px;
+  row-gap: 14px;
+  align-items: start;
+}
+#park-voices .map-reading {
+  padding-top: 38px;
+}
+#park-voices .map-reading .viz-takeaway {
+  margin: 0;
+}
+#park-voices .map-story > .map-description {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin: 4px 0 0;
+}
+@media (max-width: 850px) {
+  #park-voices .map-story {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 16px;
+  }
+  #park-voices .map-reading {
+    padding-top: 0;
+  }
+}

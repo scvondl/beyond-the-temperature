@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V03 | Park Environment & Community Perspectives</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/visualization03.css">
+  <link rel="stylesheet" href="css/maps.css">
+</head>
+
+<body>
+    <header class="nav"><a href="index.html" class="brand"><span class="brandmark">◒</span> BEYOND THE TEMPERATURE</a>
+        <nav><a href="index.html#v3">← Back to V03</a><a href="#environment">Environment</a><a
+                href="#reviews">Reviews</a><a href="#compare">Compare</a><a
+                href="#reflection">Interpretation</a></nav>
+        <button id="menu" aria-label="Toggle navigation">☰</button>
+    </header>
+    <main>
+        <section class="v03-hero">
+            <div class="eyebrow">VISUALIZATION 03 / PARK SCALE / 2021–2025 ENVIRONMENT + 2012–2026 REVIEWS</div>
+            <h1>
+                How do landscapes<br>
+                shape park <em>environmental</em><br>
+                performance?
+            </h1>
+            <p class="lead">How do vegetation, built-up landscapes and public descriptions differ across Singapore’s
+                parks?</p>
+            <div class="v03-hero-bottom"><span>ENVIRONMENTAL INDICATORS</span><span>↔</span><span>COMMUNITY
+                    PERSPECTIVES</span></div>
+        </section>
+        <section class="v03-section" id="environment">
+            <div class="v03-section-label">01 / ISLAND-WIDE ENVIRONMENTAL CONTEXT</div>
+            <h2>Reading the <em>landscape.</em></h2>
+            <p class="v03-intro">Compare the spatial distribution of vegetation (NDVI), built-up surfaces (NDBI), and
+                the supplied VBS composite raster. These are historical environmental layers—not live weather or
+                measured thermal comfort.</p>
+            <figure class="map-embed detail-map" aria-label="Vegetation and built-form visualization">
+                <div class="embed-bar"><span>NDVI · NDBI · VBS / 2021–2025</span><a href="maps/optical/index.html?left=ndvi&amp;right=vbs&amp;mode=swipe" target="_blank" rel="noopener">Open full map ↗</a></div>
+                <iframe id="environment-map" class="atlas-frame" src="maps/optical/index.html?embed=1&amp;left=ndvi&amp;right=vbs&amp;mode=swipe&amp;split=50&amp;opacity=88"
+                    title="Singapore vegetation atlas — compare NDVI, NDBI and VBS" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+                <figcaption><span>Change layers · Move the divider · Click to inspect raw values and park summaries</span><span>20 m grid · 37 eligible park VBS scores</span></figcaption>
+            </figure>
+            <div class="environment-notes">
+                <div><span class="micro">READING THE INDICATORS</span><p>NDVI describes vegetation greenness; NDBI describes built-surface spectral patterns. Neither directly measures canopy shade at a particular hour or perceived thermal comfort.</p></div>
+                <div><span class="micro">REFERENCE &amp; COVERAGE</span><p>VBS uses the original 37-park reference scale. Raw island values can extend beyond 0–100. Missing observations remain unfilled. The review study below covers 54 listed parks, including parks without eligible mapped scores.</p></div>
+            </div>
+        </section>
+        <section class="v03-section tinted" id="reviews">
+            <div class="v03-section-label">02 / COMMUNITY PERSPECTIVES</div>
+            <h2>What do people <em>notice?</em></h2>
+            <p class="v03-intro">Explore Google Maps review themes for 54 listed parks (53 with collected reviews). Word
+                clouds are regenerated from the supplied review text. Larger words are mentioned more often in this
+                sampled corpus—not necessarily liked more.</p>
+            <div class="v03-metrics">
+                <div><strong id="totalParks">54</strong><span>Parks in research list</span></div>
+                <div><strong id="totalReviews">52,419</strong><span>Collected reviews</span></div>
+                <div><strong id="totalTexts">24,189</strong><span>Text reviews</span></div>
+            </div>
+            <div class="filters"><label>Park category<select id="categoryFilter">
+                        <option value="all">All park categories</option>
+                    </select></label><label>Choose a park<select id="parkSelect"></select></label><label>Search park
+                    name<input id="parkSearch" type="search" placeholder="Search parks..."></label></div>
+            <div class="review-layout">
+                <figure class="cloud-frame"><img id="cloudImage" alt="Selected park word cloud">
+                    <figcaption>Word cloud reconstructed from collected reviews, not a thermal-comfort survey.
+                    </figcaption>
+                </figure>
+                <div class="park-info"><span class="micro" id="parkId">P01</span>
+                    <h3 id="parkName">Choose a park</h3>
+                    <p id="parkCategory"></p>
+                    <div class="park-stats">
+                        <div><b id="parkReviewCount">—</b><span>Total collected reviews</span></div>
+                        <div><b id="parkTextCount">—</b><span>With text</span></div>
+                    </div>
+                    <h4>Most mentioned terms</h4>
+                    <div class="keyword-list" id="keywords"></div>
+                    <p class="interpretation" id="parkInterpretation"></p>
+                </div>
+            </div>
+        </section>
+        <section class="v03-section" id="compare">
+            <div class="v03-section-label">03 / SIDE-BY-SIDE COMPARISON</div>
+            <h2>Different parks, <em>different stories.</em></h2>
+            <p class="v03-intro">Select two parks to compare review themes and supplied environmental metrics. Differences in word
+                counts reflect the sampled review corpus; they do not measure visitor numbers or park performance.
+                Missing environmental values are shown as unavailable.</p>
+            <div class="compare-selectors"><label>Park A<select id="compareA"></select></label><label>Park B<select
+                        id="compareB"></select></label></div>
+            <div class="comparison-grid">
+                <article id="compareCardA" class="comparison-card"></article>
+                <article id="compareCardB" class="comparison-card"></article>
+            </div>
+        </section>
+        <section class="v03-section reflection-v03" id="reflection">
+            <div class="v03-section-label">04 / CRITICAL INTERPRETATION</div>
+            <h2>What can these <em>data actually tell us?</em></h2>
+            <div class="reflection-cards">
+                <article><span>01 / SPATIAL INDICATORS</span>
+                    <h3>Greener does not automatically mean cooler.</h3>
+                    <p>NDVI and NDBI characterise surfaces. Without matched local air temperature, shade and activity
+                        observations, they cannot establish how comfortable park users feel.</p>
+                </article>
+                <article><span>02 / PUBLIC REVIEWS</span>
+                    <h3>More mentions do not mean better experiences.</h3>
+                    <p>Words such as “walk”, “trail” or “family” identify themes in reviews, not the number of people
+                        doing those activities, their satisfaction or their thermal comfort.</p>
+                </article>
+                <article><span>03 / REPRESENTATION</span>
+                    <h3>Who is missing from the dataset?</h3>
+                    <p>Reviews are self-selected, unevenly sampled across parks and skewed toward English. Their time
+                        span also differs from the 2021–2025 raster period.</p>
+                </article>
+            </div>
+            <div class="v03-outro">
+                <p>See how visitors described heat, shade and activity during their own park visits.</p><a
+                    class="button" href="index.html#v4">Continue to Map 04 — Survey &amp; Comfort
+                    →</a>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/visualization03.js"></script>
+</body>
+
+</html>

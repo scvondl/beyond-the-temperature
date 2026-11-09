@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare Singapore NDVI, NDBI and vegetation-built spectral scores at 20 m with an interactive swipe map.">
+  <title>Singapore Vegetation Atlas</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="atlas" id="atlas">
+    <header class="app-header">
+      <div class="brand"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span><div><span class="eyebrow">SINGAPORE · DEP5118</span><h1>Vegetation atlas<span class="title-dot">.</span></h1></div></div>
+      <div class="header-actions">
+        <label class="park-finder"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><select id="park-search" aria-label="Find a park"><option value="">Find a park</option></select></label>
+        <div class="mode-switch" role="group" aria-label="Map display mode"><button id="single-mode" type="button" aria-pressed="false">Single</button><button id="swipe-mode" class="active" type="button" aria-pressed="true"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v14M5 6 2 9l3 3M13 6l3 3-3 3"/></svg>Swipe</button></div>
+        <button class="icon-button" id="fullscreen" aria-label="Enter fullscreen" title="Fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+      </div>
+    </header>
+
+    <main class="map-stage" id="map-stage">
+      <div id="map" aria-label="Interactive Singapore NDVI, NDBI and VBS map"></div>
+      <div id="loading" class="loading"><span class="spinner"></span>Preparing the atlas…</div>
+      <div class="map-selectors">
+        <section class="layer-card left-card" aria-label="Left map layer"><div class="layer-label"><span class="side-tag">A</span><span id="left-category">VEGETATION GREENNESS</span></div><label class="sr-only" for="left-layer">Left layer</label><select id="left-layer"></select><div class="layer-caption" id="left-caption"></div></section>
+        <section class="layer-card right-card" aria-label="Right map layer"><div class="layer-label"><span class="side-tag">B</span><span id="right-category">VEGETATION–BUILT SCORE</span></div><label class="sr-only" for="right-layer">Right layer</label><select id="right-layer"></select><div class="layer-caption" id="right-caption"></div></section>
+      </div>
+
+      <div class="map-tools"><button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button><button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button><span></span><button id="reset-view" title="Show Singapore" aria-label="Show all of Singapore"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9Z"/><circle cx="12" cy="12" r="2"/></svg></button><button id="options-button" title="Map options" aria-label="Map options" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 17h18"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></svg></button></div>
+
+      <aside id="options-panel" class="options-panel" hidden>
+        <div class="panel-heading"><strong>Map options</strong><button id="close-options" aria-label="Close map options">×</button></div>
+        <label class="control-label" for="opacity">Layer opacity <output id="opacity-value">82%</output></label><input id="opacity" type="range" min="15" max="100" value="82">
+        <label class="control-label" for="basemap">Basemap</label><select id="basemap"><option value="light">Light</option><option value="dark">Dark</option><option value="none">Plain</option></select>
+        <label class="check-control"><input type="checkbox" id="park-outlines" checked><span>Show park boundaries</span></label>
+        <label class="check-control"><input type="checkbox" id="shortlist-only"><span>Original 9 shortlisted parks only</span></label>
+        <div class="control-label presets-label">Quick comparisons</div><button class="preset" data-left="ndvi" data-right="ndbi">NDVI ↔ NDBI <span>↗</span></button><button class="preset" data-left="ndvi" data-right="vbs">NDVI ↔ VBS <span>↗</span></button><button class="preset" data-left="vbs" data-right="vbs-raw">VBS display ↔ original scale <span>↗</span></button>
+      </aside>
+
+      <div id="swipe-divider" class="swipe-divider"><button id="swipe-handle" class="swipe-handle" role="slider" aria-label="Swipe comparison divider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal"><svg viewBox="0 0 28 24" aria-hidden="true"><path d="m10 6-6 6 6 6m8-12 6 6-6 6M14 4v16"/></svg></button></div>
+      <div class="map-hint" id="map-hint"><span class="hint-dot"></span><span id="hint-text">Drag the divider · click a park or pixel</span><button id="dismiss-hint" aria-label="Dismiss map hint">×</button></div>
+
+      <section class="legend legend-left" id="legend-left" aria-label="Left layer legend"></section>
+      <section class="legend legend-right" id="legend-right" aria-label="Right layer legend"></section>
+      <div class="map-credit">Sentinel-2 / Cloud Score+ · supplied optical analysis</div>
+      <div class="map-status" id="map-status" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer class="app-footer"><span><span class="small-dot"></span><b>37</b> VBS parks <span class="footer-separator">/</span> 20 m Sentinel-2 <span class="footer-separator">/</span> 2021–2025</span><button id="about-button">Data &amp; methods <span>↗</span></button></footer>
+  </div>
+
+  <dialog id="about-dialog"><div class="dialog-heading"><div><span class="eyebrow">DATA &amp; METHODS</span><h2>Reading this atlas</h2></div><button id="close-about" aria-label="Close data and methods">×</button></div><div class="dialog-body">
+    <div class="method-row"><span class="method-badge cool">NDVI</span><div><h3>Vegetation greenness</h3><p>Sentinel-2 surface reflectance, 2021–2025, on a common 20 m grid. Higher NDVI generally indicates a stronger vegetation signal. The fixed map range is −0.2 to 1.0.</p></div></div>
+    <div class="method-row"><span class="method-badge warm">NDBI</span><div><h3>Built-surface spectral signal</h3><p>Higher NDBI indicates a stronger built or bare-surface spectral signal. NDBI is not a building-area percentage and can respond to bare soil. Its fixed map range is −0.7 to 0.7.</p></div></div>
+    <div class="method-row"><span class="method-badge cool">VBS</span><div><h3>One formula, two display ranges</h3><p>100 × [0.5 × N(NDVI) + 0.5 × (1 − N(NDBI))]. The normalization reference is the original 37 supported park averages. Higher means greener with a weaker built-surface signal. Island pixels can fall outside this reference: the supplied raw VBS spans −222.78 to 169.12. About 65.6% of supported pixels fall outside 0–100.</p><p style="margin-top:8px">The 0–100 view clips colours at the endpoints; the original-scale view displays −225 to 175. Both use the same underlying score. Pixel popups retain the raw VBS. No island-specific normalization has been fitted.</p></div></div>
+    <div class="method-row"><span class="method-badge cool">QA</span><div><h3>Observation support</h3><p>At least 3 clear days per qualifying quarter, 3 quarters per qualifying year, and 3 qualifying land years for the main island rasters. All 17 tiles completed. Main results support 93.76% of the planning mask after excluding dominant water. Low-support areas and water remain transparent in the index layers; the coverage layer distinguishes them.</p></div></div>
+    <div class="method-row"><span class="method-badge cool">PARKS</span><div><h3>37 scored parks · 48 boundaries</h3><p>Existing park values and eligible-year lists are copied unchanged. Park eligibility uses its original area-coverage rules. Consequently, pixel-supported island means and the original park summaries need not match exactly. Eleven parks have no supported VBS; blank values remain unavailable.</p></div></div>
+    <p class="method-note">NDVI and NDBI share the NIR band; VBS combines related indicators and is not independent evidence. These results describe spectral vegetation–built characteristics. They do not measure shade, thermal comfort or user experience.</p>
+    <div class="method-links"><a href="data/park_vegetation_building_scores.csv" download>Download park values ↓</a><a href="data/annual_index_statistics.csv" download>Annual support ↓</a><a href="data/metadata.json" target="_blank" rel="noopener">Data provenance ↗</a><a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED" target="_blank" rel="noopener">Sentinel-2 source ↗</a></div>
+  </div></dialog>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+  <script src="../embed-host.js"></script>
+</body>
+</html>

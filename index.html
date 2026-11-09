@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beyond the Temperature | Singapore Parks</title>
+  <meta name="description" content="Explore four maps of Singapore’s parks through temperature, landscape, visitor reviews and published survey responses about heat and comfort.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/maps.css">
+  <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/hero-cinematic.css">
+</head>
+
+<body>
+  <header class="nav"><a class="brand" href="#home"><span class="brandmark">◒</span> BEYOND THE TEMPERATURE</a>
+    <nav><a href="#story">The Story</a><a href="#explore">Explore</a><a href="#contribute">Participate</a><a href="#methods">About
+        Data</a></nav><button id="menu" aria-label="Toggle navigation">☰</button>
+  </header>
+  <main>
+    <section class="hero hero-cinematic" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline">
+        <span class="eyebrow"><span class="hero-status-dot" aria-hidden="true"></span>DEP5118 &nbsp;|&nbsp;COMMUNITY DATA GATHERING & VISUALISATION&nbsp;|&nbsp; SINGAPORE PARKS</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Beyond the<br><em>Temperature<span class="hero-fullstop">.</span></em></h1>
+          <p class="hero-hook">Green on the map.<br><span>Different on the ground.</span></p>
+          <p class="lead hero-narrative">At Fort Canning, sunlight filters through the trees and moves across the path. But can maps tell us what that shade feels like? Follow the story of heat, landscape and everyday experience in Singapore’s parks.</p>
+          <div class="actions hero-actions">
+            <a class="button hero-primary" href="#story">Begin the story <span aria-hidden="true">↗</span></a>
+            <a class="textlink hero-secondary" href="#explore">Explore the maps <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art hero-photo">
+          <figure class="hero-photo-card">
+            <img src="assets/fort_canning_qi_yuetian.jpg" alt="A shaded brick staircase winds through dense tropical vegetation beneath the spreading branches of a large tree in Fort Canning Park, Singapore." fetchpriority="high" decoding="async">
+            <div class="hero-photo-overlay" aria-hidden="true"></div>
+            <div class="hero-photo-top" aria-hidden="true"><span class="hero-photo-mark">◌</span></div>
+            <figcaption class="hero-photo-caption">
+              <span class="hero-photo-kicker">FORT CANNING PARK &nbsp;·&nbsp; SINGAPORE</span>
+              <strong>Where the light<br>meets the landscape.</strong>
+              <div class="hero-photo-meta"><span>PHOTO BY QI YUETIAN</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <a href="#story" class="hero-scroll"><span class="hero-scroll-line" aria-hidden="true"></span> SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a>
+        <span class="hero-mobile-credit">PHOTO BY QI YUETIAN</span>
+      </div>
+    </section>
+    <section class="intro section" id="story">
+      <div class="section-number">THE RESEARCH QUESTION</div>
+      <div class="intro-grid">
+        <h2>What does it mean for a park to <em>perform better?</em></h2>
+        <div>
+          <p>Temperature alone cannot describe how people experience public space. Shade, movement, activities and
+            individual perceptions complicate any simple ranking of parks.</p>
+          <p>We move from citywide maps to park reviews and visitors’ own accounts of heat, shade and comfort.</p>
+          <div class="note">RESEARCH PRINCIPLE <strong>Measured conditions ≠ lived comfort.</strong> We are testing a question, not claiming a causal relationship.</div>
+        </div>
+      </div>
+      <div class="story-orientation" aria-label="The three kinds of evidence in this research">
+        <div><span class="orientation-count">01 / MEASURE</span><strong>What is the environment like?</strong><p>Surface temperature and air-temperature patterns provide different forms of thermal evidence.</p></div>
+        <div><span class="orientation-count">02 / CONTEXT</span><strong>What shapes the landscape?</strong><p>Vegetation and built-surface indicators help us describe environmental differences.</p></div>
+        <div><span class="orientation-count">03 / EXPERIENCE</span><strong>What do people notice?</strong><p>Online reviews show what visitors chose to mention. Published survey responses describe how individual visits felt.</p></div>
+      </div>
+    </section>
+    <section class="chapter section" id="explore">
+      <div class="section-number">EXPLORE THE EVIDENCE </div>
+      <h2>One question.<br><em>Four lenses.</em></h2>
+      <p class="section-sub">Each chapter adds a new piece of evidence. Read the short explanation, try the suggested interaction, then follow the question to the next map. You can also jump directly to any stage.</p>
+      <nav class="story-steps" aria-label="Explore story chapters">
+        <a href="#v1" data-story-step="v1"><span>01</span><strong>Measure heat</strong></a>
+        <a href="#v3" data-story-step="v3"><span>02</span><strong>Read the landscape</strong></a>
+        <a href="#park-voices" data-story-step="park-voices"><span>03</span><strong>Hear park voices</strong></a>
+        <a href="#v4" data-story-step="v4"><span>04</span><strong>Ask about comfort</strong></a>
+      </nav>
+      <div class="chapters">
+        <article class="viz interactive-viz" id="v1">
+          <div class="viz-header"><span>CHAPTER 01 / WHAT CAN WE MEASURE?</span><span class="chapter-index"></div>
+          <div class="viz-grid map-story">
+            <div class="viz-copy">
+              <p class="kicker">SURFACE HEAT, BACKGROUND AIR &amp; LIVE STATIONS</p>
+              <h3>Do surface and air temperatures tell the same story?</h3>
+              <p class="map-description">Compare how warm the ground and the air are across Singapore, then see how the parks rank for heat.</p>
+            </div>
+            <div class="viz-copy map-reading" id="v2">
+              <div class="viz-takeaway"><b>Start with a place you know.</b><br>
+                Does it appear warm on both sides? The layers cover different periods, so use them to compare broad patterns.</div>
+            </div>
+          </div>
+          <section class="map-guide" aria-labelledby="temperature-guide">
+            <h4 id="temperature-guide">How to read the temperature map</h4>
+            <p class="map-guide-hint">Choose a layer for <b>A</b> and <b>B</b>, then drag the divider in <b>Swipe</b> mode. Check each side’s legend for its temperature or score scale.</p>
+            <dl class="map-guide-layers">
+              <div>
+                <dt>Surface temperature · 2021–2025</dt>
+                <dd>How warm the ground, roofs and treetops were in °C, based on satellite images. Also called land surface temperature (LST).</dd>
+              </div>
+              <div>
+                <dt>Background air · 2021–2024</dt>
+                <dd>Typical outdoor air temperature in °C for each planning area, estimated from past weather station readings.</dd>
+              </div>
+              <div>
+                <dt>Park heat score</dt>
+                <dd>Compares heat across 45 parks on a 0–100 scale. Surface and background air temperatures count equally. Higher means relatively hotter.</dd>
+              </div>
+              <div>
+                <dt>Latest station air temperature</dt>
+                <dd>Each dot shows a weather station’s air temperature in °C. Check the legend for the reading time and whether it’s a saved reading.</dd>
+              </div>
+            </dl>
+            <details class="map-guide-more">
+              <summary>More layers · individual years and basemap</summary>
+              <dl class="map-guide-layers">
+                <div>
+                  <dt>Surface temperature · individual years</dt>
+                  <dd>Choose 2021, 2022, 2023, 2024 or 2025 to see surface heat for that year.</dd>
+                </div>
+                <div>
+                  <dt>Basemap only</dt>
+                  <dd>Use place names and boundaries to find your bearings.</dd>
+                </div>
+              </dl>
+            </details>
+          </section>
+          <figure class="map-embed" aria-label="Temperature visualization">
+            <div class="embed-bar"><span>MAP 01 / TEMPERATURE</span><a href="maps/thermal/index.html?left=lst&amp;right=air&amp;mode=swipe" target="_blank" rel="noopener">Open full map ↗</a></div>
+            <iframe id="thermal-map" class="atlas-frame" src="maps/thermal/index.html?embed=1&amp;left=lst&amp;right=air&amp;mode=swipe&amp;split=50&amp;opacity=82"
+              title="Singapore temperature atlas — compare LST, air temperature and park heat scores" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+            <figcaption><span>150 m LST · 48 park geometries · 45 heat scores</span></figcaption>
+          </figure>
+        </article>
+        <section class="story-transition" aria-label="Story transition">
+          <div class="transition-scene">
+            <div class="transition-content">
+              <div class="transition-kicker">THE NEXT QUESTION <span>↓</span></div>
+              <h4>We can see a pattern. <em>But what might shape it?</em></h4>
+              <p>Temperature is only the beginning. Landscapes differ in vegetation and built form, so the next map explores those conditions rather than assuming heat has a single cause.</p>
+            </div>
+          </div>
+        </section>
+        <article class="viz interactive-viz" id="v3">
+          <div class="viz-header"><span>CHAPTER 02 / WHAT SHAPES THE LANDSCAPE?</span><span class="chapter-index"></div>
+          <div class="viz-grid map-story">
+            <div class="viz-copy">
+              <p class="kicker">VEGETATION, BUILT FORM &amp; PARKS</p>
+              <h3>How green are Singapore’s parks and their surroundings?</h3>
+              <p class="map-description">Satellite images from 2021–2025 show patterns of vegetation, built surfaces and bare ground.</p>
+            </div>
+            <div class="viz-copy map-reading">
+              <div class="viz-takeaway"><b>Start at the edge of a park.</b><br>
+                See whether the park looks greener than the blocks around it.</div>
+            </div>
+          </div>
+          <section class="map-guide" aria-labelledby="landscape-guide">
+            <h4 id="landscape-guide">How to read the landscape map</h4>
+            <p class="map-guide-hint">Try <b>NDVI</b> on side <b>A</b> and <b>NDBI</b> on side <b>B</b>. Drag the divider in <b>Swipe</b> mode to compare the same place.</p>
+            <dl class="map-guide-layers map-guide-layers-three">
+              <div>
+                <dt>NDVI · island greenness</dt>
+                <dd>Shows where satellites detect green vegetation. Darker green means a stronger vegetation signal.</dd>
+              </div>
+              <div>
+                <dt>NDBI · built-surface signal</dt>
+                <dd>Shows where built surfaces or bare ground stand out. Darker brown means a stronger signal.</dd>
+              </div>
+              <div>
+                <dt>VBS · 0–100 display</dt>
+                <dd>The Vegetation–Built Score combines greenness and the built-surface signal. Greener areas with a weaker built-surface signal score higher and appear darker green.</dd>
+              </div>
+            </dl>
+            <details class="map-guide-more">
+              <summary>More layers · original scores, park summaries and coverage</summary>
+              <dl class="map-guide-layers map-guide-layers-three">
+                <div>
+                  <dt>VBS · original reference scale</dt>
+                  <dd>Shows original scores, including values below 0 or above 100. The scale uses 37 parks as a reference.</dd>
+                </div>
+                <div>
+                  <dt>Park mean NDVI</dt>
+                  <dd>Average vegetation greenness within each park.</dd>
+                </div>
+                <div>
+                  <dt>Park mean NDBI</dt>
+                  <dd>Average built or bare ground signal within each park.</dd>
+                </div>
+                <div>
+                  <dt>Park VBS</dt>
+                  <dd>One combined vegetation–built score per park.</dd>
+                </div>
+                <div>
+                  <dt>Observation coverage</dt>
+                  <dd>Shows where enough clear satellite images were available and where there is water or too little data.</dd>
+                </div>
+                <div>
+                  <dt>Basemap only</dt>
+                  <dd>Use place names and boundaries to find your bearings.</dd>
+                </div>
+              </dl>
+            </details>
+          </section>
+          <figure class="map-embed" aria-label="Vegetation and built-form visualization">
+            <div class="embed-bar"><span>MAP 02 / NDVI · NDBI · VBS</span><a href="maps/optical/index.html?left=ndvi&amp;right=vbs&amp;mode=swipe" target="_blank" rel="noopener">Open full map ↗</a></div>
+            <iframe id="optical-map" class="atlas-frame" src="maps/optical/index.html?embed=1&amp;left=ndvi&amp;right=vbs&amp;mode=swipe&amp;split=50&amp;opacity=88"
+              title="Singapore vegetation atlas — compare NDVI, NDBI and VBS" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+            <figcaption><span>20 m grid · 2021–2025 · 37 park VBS scores</span></figcaption>
+          </figure>
+        </article>
+        <section class="story-transition" aria-label="Story transition">
+          <div class="transition-scene">
+            <div class="transition-content">
+              <div class="transition-kicker">FROM MAPS TO PEOPLE <span>↓</span></div>
+              <h4>Green does not tell us <em>what a visit feels like.</em></h4>
+              <p>What happens when environmental indicators meet the words people actually use about the same parks?</p>
+            </div>
+          </div>
+        </section>
+        <article class="viz interactive-viz" id="park-voices">
+          <div class="viz-header"><span>CHAPTER 03 / WHAT DO PEOPLE TALK ABOUT?</span><span class="chapter-index"></div>
+          <div class="viz-grid map-story">
+            <div class="viz-copy">
+              <p class="kicker">GOOGLE MAPS REVIEWS, 54 PARKS & COMMON WORDS</p>
+              <h3>What do visitors talk about when describing Singapore's parks?</h3>
+            </div>
+            <div class="viz-copy map-reading">
+              <div class="viz-takeaway"><b>Bigger words appeared more often.</b><br>
+                Use a park’s word cloud to see which topics came up in its collected reviews. The results reflect the people who chose to post.</div>
+            </div>
+            <p class="map-description">Explore how people describe different parks through the words they use most often.
+              From 24,189 text reviews across 53 of the 54 study parks, the map brings together park categories,
+              the ten most frequent words and an individual word cloud for each park with review data.</p>
+          </div>
+          <figure class="map-embed" aria-label="Word frequency map of the 54 parks">
+            <div class="embed-bar"><span>MAP 03 / 54 PARKS · WORD CLOUDS</span><a
+                href="maps/parks/index.html" target="_blank" rel="noopener">Open full map ↗</a></div>
+            <iframe id="parks-map" class="atlas-frame" src="maps/parks/index.html?embed=1"
+              title="Map of the 54 Singapore parks — click a park to see its word frequency pie chart and word cloud"
+              loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+            <figcaption><span>53 park boundaries + 1 point · 24,189 text reviews</span></figcaption>
+          </figure>
+        </article>
+        <section class="story-transition" aria-label="Story transition">
+          <div class="transition-scene">
+            <div class="transition-content">
+              <div class="transition-kicker">FROM REVIEWS TO SURVEY RESPONSES <span>↓</span></div>
+              <h4>How did it feel <em>to be there?</em></h4>
+              <p>The survey asks what visitors were doing, how much shade they had and how warm they felt. The next map shows their published responses.</p>
+            </div>
+          </div>
+        </section>
+        <article class="viz" id="v4">
+          <div class="viz-header"><span>CHAPTER 04 / MAP 04 · SURVEY &amp; COMFORT</span><span class="chapter-index"></span></div>
+          <div class="viz-grid map-story">
+            <div class="viz-copy">
+              <p class="kicker">VISITOR SURVEY RESPONSES</p>
+              <h3>How do people actually experience heat in parks?</h3>
+            </div>
+            <div class="viz-copy map-reading">
+              <div class="viz-takeaway"><b>Thermal comfort is more than temperature.</b><br>
+                Visitors may experience the same park differently depending on shade, breeze, activity and exposure to sunlight. These firsthand observations add context to environmental measurements, but individual survey responses do not represent every park visitor.</div>
+            </div>
+          </div>
+          <div class="viz-copy v4-fullwidth-intro" style="width:100%;max-width:none;margin-bottom:24px">
+            <p class="map-description">Select a park marker, then choose a highlighted spot in the illustration to read visitors’ responses. Use <strong>Park type</strong> to filter the map.</p>
+          </div>
+          <div id="v4-app" class="v4-app">
+            <div class="v4-toolbar"><label for="v4-park">Park type</label><select id="v4-park"><option value="">All park types</option></select><span id="v4-status" role="status" aria-live="polite">Loading published survey responses…</span><button id="v4-refresh" type="button">Refresh data</button></div>
+            <div id="v4-map" aria-label="Interactive survey location map"></div>
+            <div class="v4-workspace" id="v4-workspace" hidden>
+              <div class="v4-scene">
+                <div class="v4-scene-head"><strong id="v4-park-name">Selected park</strong><span id="v4-type"></span></div>
+                <div class="v4-art-wrap" id="v4-art-wrap">
+                  <svg id="v4-illustration" viewBox="0 0 900 450" role="img" aria-label="Illustrated park with interactive survey observation hotspots"></svg>
+                  <div class="v4-popover" id="v4-popover" hidden role="status"></div>
+                </div>
+              </div>
+            </div>
+            <p class="v4-footnote">Self-selected responses are not representative of all park visitors.</p>
+          </div>
+          <style>
+            #v4 .v4-app{font-family:inherit;color:#263e36}#v4 .v4-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:13px 16px;background:#e6ece4;border:1px solid #c9d8ca;border-radius:12px 12px 0 0}#v4 .v4-toolbar label{font-weight:700}#v4 .v4-toolbar select,#v4 .v4-toolbar button{padding:9px 12px;border:1px solid #9db3a3;border-radius:8px;background:white;color:#263e36;font:inherit}#v4 #v4-status{flex:1;font-size:.84rem}#v4 #v4-map{height:430px;min-height:300px;background:#e6ece4;border:1px solid #c9d8ca;border-top:0}#v4 .v4-workspace{margin-top:16px}#v4 .v4-workspace[hidden]{display:none}#v4 .v4-scene{background:#f8f8f2;border:1px solid #c9d8ca;border-radius:12px;overflow:hidden}#v4 .v4-scene-head{display:flex;justify-content:space-between;gap:10px;padding:14px 18px}#v4 .v4-scene-head span{font-size:.82rem;color:#607c6b}#v4 .v4-art-wrap{position:relative;overflow:hidden}#v4 #v4-illustration{display:block;width:100%;height:auto;max-width:none}#v4 .v4-hotspot{cursor:pointer;outline:none}#v4 .v4-hotspot circle{fill:#fff;stroke:#315e4a;stroke-width:4}#v4 .v4-hotspot text{fill:#315e4a;font-size:25px;font-weight:bold;text-anchor:middle;pointer-events:none}#v4 .v4-hotspot:focus circle,#v4 .v4-hotspot:hover circle{fill:#fff;stroke-width:5}#v4 .v4-popover{position:absolute;z-index:20;max-width:min(340px,80%);max-height:230px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;box-sizing:border-box;padding:15px 18px;background:#fffdf7;border:1px solid #d0c7b6;border-radius:13px;box-shadow:0 12px 32px #1b392b40;font-size:.9rem;line-height:1.5;pointer-events:auto;touch-action:pan-y}#v4 .v4-popover[hidden]{display:none}#v4 .v4-popover strong{display:block;margin-bottom:5px}#v4 .v4-popover p{margin:6px 0;white-space:pre-wrap;overflow-wrap:anywhere}#v4 .v4-popover small{color:#607c6b}#v4 .v4-caption,#v4 .v4-footnote{font-size:.78rem;color:#607c6b;padding:8px 15px}#v4 .leaflet-container{font-family:inherit}@media(max-width:800px){#v4 #v4-map{height:340px}#v4 .v4-popover{font-size:.78rem;padding:10px;max-height:180px}}
+            /* Chapter 04: extend introductory description to the full chapter width. */
+            #v4 .v4-fullwidth-intro, #v4 .v4-fullwidth-intro > .map-description { width:100%; max-width:none; box-sizing:border-box; }
+            /* Chapter 04: contain Leaflet stacking without changing site navigation. */
+            #v4 { position: relative; z-index: 0; isolation: isolate; }
+            #v4 .v4-app { position: relative; z-index: 0; isolation: isolate; }
+            #v4 #v4-map { position: relative; z-index: 0; overflow: hidden; }
+            #v4 #v4-map.leaflet-container { z-index: 0; }
+            /* All park illustrations use a fixed 2.5:1 frame; images cover it without distortion. */
+             #v4 #v4-illustration { aspect-ratio: 5 / 2; }
+             /* Desaturate only base-map tiles; survey markers remain green. */
+            #v4 #v4-map .leaflet-tile-pane { filter: grayscale(100%); }
+          </style>
+          <script>
+          (()=>{
+            const API='https://singaporeparks.api.ushahidi.io/api/v5', FORM=2;
+            const status=document.getElementById('v4-status'), select=document.getElementById('v4-park');
+            const workspace=document.getElementById('v4-workspace'), svg=document.getElementById('v4-illustration');
+            const popup=document.getElementById('v4-popover'), wrap=document.getElementById('v4-art-wrap');
+            // Park categories follow the project's A-E typology; unknown selections remain Other.
+            const parkTypes={};
+            const assign=(type,names)=>names.split('|').forEach(name=>parkTypes[name.trim().toLowerCase()]=type);
+            assign('Waterfront / Reservoir','Bishan-Ang Mo Kio Park|Bedok Reservoir Park|Punggol Waterway Park|Sengkang Riverside Park|Kallang Riverside Park|Lower Seletar Reservoir Park|MacRitchie Reservoir Park|Upper Seletar Reservoir Park|Lower Peirce Reservoir Park|Upper Peirce Reservoir Park|Jurong Lake Gardens|Woodlands Waterfront Park');
+            assign('Coastal','East Coast Park|West Coast Park|Pasir Ris Park|Changi Beach Park|Sembawang Park|Punggol Point Park');
+            assign('Hill / Woodland','Fort Canning Park|Mount Faber Park|Kent Ridge Park|Telok Blangah Hill Park|Bukit Batok Town Park|Bukit Batok Nature Park|Clementi Woods Park|Hindhede Nature Park|Bukit Gombak Park|Zhenghua Park|Springleaf Nature Park|Thomson Nature Park|Windsor Nature Park|Chestnut Nature Park');
+            assign('Community / Town Park','Ang Mo Kio Town Garden West|Ang Mo Kio Town Garden East|Bedok Town Park|Toa Payoh Town Park|Pasir Ris Town Park|Yishun Park|Punggol Park|Admiralty Park|Choa Chu Kang Park|Jurong Central Park|Bidadari Park|Woodlands Town Garden|Tiong Bahru Park');
+            assign('Urban Core / Compact Park','Duxton Plain Park|Esplanade Park|Hong Lim Park|Istana Park|Kim Seng Park|one-north Park|Marina City Park|Pearl\'s Hill City Park|War Memorial Park');
+            const categories=['Coastal','Community / Town Park','Hill / Woodland','Other','Urban Core / Compact Park','Waterfront / Reservoir'];
+            const parkNames={
+              'bishan-ang mo kio park':'Bishan–Ang Mo Kio Park','sengkang riverside park':'Sengkang Riverside Park','upper seletar reservoir park':'Upper Seletar Reservoir Park',
+              'east coast park':'East Coast Park','changi beach park':'Changi Beach Park','kent ridge park':'Kent Ridge Park',
+              'mount faber park':'Mount Faber Park','fort canning park':'Fort Canning Park','clementi woods park':'Clementi Woods Park',
+              'bedok town park':'Bedok Town Park','war memorial park':'War Memorial Park'
+            };
+            let map,layer,posts=[],selected=null,loading=false,locked=false,fields=[];
+            const norm=s=>String(s??'').toLowerCase().trim().replace(/[–—]/g,'-').replace(/\s+/g,' ');
+            const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+            function unwrap(v){
+              if(v==null)return '';
+              if(Array.isArray(v))return v.map(unwrap).filter(Boolean).join(', ');
+              if(typeof v==='object')return unwrap(v.value??v.values??v.label??v.name??v.text??v.title??'');
+              return String(v);
+            }
+            // Ushahidi v5 embeds submitted answers in result.post_content[].fields[].value.
+            // Field definitions' "options" are possible answers, not participant selections.
+            function extractValues(p){
+              const out={};
+              for(const stage of (Array.isArray(p.post_content)?p.post_content:[])){
+                for(const f of (Array.isArray(stage.fields)?stage.fields:[])){
+                  if(f.response_private===true||f.response_private===1)continue;
+                  const v=unwrap(f.value);
+                  if(!v)continue;
+                  out[String(f.id)]=v;
+                  if(f.key)out[String(f.key)]=v;
+                  if(f.label)out[norm(f.label)]=v;
+                }
+              }
+              // Fallback for other public response formats, without overriding v5 values.
+              for(const obj of [p.values,p.post_values,p.attributes]){
+                if(!obj)continue;
+                if(Array.isArray(obj)){
+                  for(const x of obj){
+                    if(!x||typeof x!=='object')continue;
+                    const k=x.attribute?.id??x.attribute_id??x.attribute??x.key??x.name??x.label;
+                    if(k!=null&&!out[String(k)])out[String(k)]=unwrap(x.value??x.values??'');
+                  }
+                }else if(typeof obj==='object'){
+                  for(const [k,v] of Object.entries(obj))if(!out[String(k)])out[String(k)]=unwrap(v);
+                }
+              }
+              return out;
+            }
+            const SURVEY_FIELDS={park:8,visit:18,location:9,photo:17,sensation:10,comfort:11,shade:12,activity:13,heatEffect:14,adaptation:15,comments:16};
+            function fieldValue(p,terms,id){
+              const vals=extractValues(p);
+              if(id!=null&&vals[String(id)])return vals[String(id)];
+              for(const [k,v] of Object.entries(vals)){
+                if(v&&terms.some(t=>norm(k).includes(t)))return v;
+              }
+              return '';
+            }
+            function coords(p){
+              const g=p.geojson?.features?.find(f=>f.geometry?.type==='Point')?.geometry??p.geometry??p.location;
+              if(g?.type==='Point'&&Array.isArray(g.coordinates))return [+g.coordinates[1],+g.coordinates[0]];
+              if(g?.lat!=null)return [+g.lat,+(g.lon??g.lng)];
+              return null;
+            }
+            function identifyPark(p){
+              const explicit=fieldValue(p,['which park','park are you','park name','visiting'],SURVEY_FIELDS.park);
+              const raw=norm(explicit);
+              const key=Object.keys(parkNames).find(k=>raw===k||raw.includes(k));
+              if(key)return parkNames[key];
+              if(explicit)return explicit;
+              // Only match a park mentioned explicitly in the title/description; never infer from coordinates.
+              const narrative=norm([p.title,p.description].join(' '));
+              const match=Object.keys(parkNames).find(k=>narrative.includes(k));
+              return match?parkNames[match]:'Park not identified';
+            }
+            function classify(p){
+              const park=identifyPark(p), description=String(p.content??p.description??'');
+              const shade=fieldValue(p,['shade','shaded'],SURVEY_FIELDS.shade);
+              const activity=fieldValue(p,['currently doing','activity'],SURVEY_FIELDS.activity);
+              const comfort=fieldValue(p,['thermally comfortable','thermal comfort'],SURVEY_FIELDS.comfort);
+              const sensation=fieldValue(p,['hot or cold','thermal sensation'],SURVEY_FIELDS.sensation);
+              const text=norm([p.title,description,fieldValue(p,['where are you','location description']),shade].join(' '));
+              const tags=[];
+              if(/tree|canopy|shad|树荫|树底|树下/.test(text) && !/fully exposed|no shade|unshaded|without shade/.test(text))tags.push('shade');
+              if(/open|expos|sunlight|sunny|lawn|阳光|晒/.test(text))tags.push('open');
+              if(/path|trail|walk|boardwalk|步道|步行/.test(text)||/walk|jog|run|cycl/.test(norm(activity)))tags.push('path');
+              if(/lake|river|reservoir|waterfront|coast|beach|sea|waterside|湖|河|海/.test(text))tags.push('water');
+              if(/pavilion|shelter|bench|seat|rest area|座椅|长椅/.test(text)||/sit|rest|relax/.test(norm(activity)))tags.push('rest');
+              if(!tags.length)tags.push('other');
+              const heatEffect=fieldValue(p,['has the heat influenced'],SURVEY_FIELDS.heatEffect);
+              const adaptation=fieldValue(p,['how has the heat influenced'],SURVEY_FIELDS.adaptation);
+              const comments=fieldValue(p,['anything else'],SURVEY_FIELDS.comments);
+              const visit=fieldValue(p,['when did you visit'],SURVEY_FIELDS.visit);
+              return {...p,park,type:parkTypes[norm(park)]??'Other',coords:coords(p),desc:description,shade,activity,comfort,sensation,heatEffect,adaptation,comments,visit,tags};
+            }
+            async function getJSON(url){const r=await fetch(url,{headers:{Accept:'application/json'},cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
+            async function detailsFor(post){
+              // Detailed public posts may contain survey field values absent from the GeoJSON feed.
+              // If unavailable, preserve the mapped record without inventing field answers.
+              try{const d=await getJSON(API+'/posts/'+encodeURIComponent(post.id));return {...post,...(d.result??d.data??d),geojson:post.geojson};}
+              catch{return post;}
+            }
+            async function load(){
+              if(loading)return;loading=true;status.textContent='Loading published survey responses…';
+              try{
+                const all=[];
+                for(let page=1;page<=15;page++){
+                  const q=new URLSearchParams({page:String(page),limit:'500',has_location:'mapped'});
+                  q.append('form[]',String(FORM));q.append('status[]','published');
+                  const d=await getJSON(API+'/posts/geojson?'+q);
+                  const batch=Array.isArray(d.results)?d.results:[];all.push(...batch);
+                  if(batch.length<500||(Number.isFinite(+d.count)&&all.length>=+d.count))break;
+                }
+                const enriched=await Promise.all(all.map(detailsFor));
+                posts=enriched.filter(p=>(p.form==null||Number(p.form?.id??p.form)===FORM)&&(p.status==null||norm(p.status)==='published')).map(classify);
+                const valid=posts.filter(p=>p.coords&&p.coords.every(Number.isFinite)&&p.coords[0]>1.1&&p.coords[0]<1.55&&p.coords[1]>103.5&&p.coords[1]<104.2);
+                const old=select.value;
+                select.replaceChildren(new Option('All park types',''),...categories.map(n=>new Option(n,n)));
+                if(categories.includes(old))select.value=old;
+                status.textContent=posts.length+' published responses';
+                draw();if(selected){const p=posts.find(x=>String(x.id)===String(selected.id));if(p)openPark(p,false);else{workspace.hidden=true;selected=null;}}
+              }catch(e){status.textContent='Live data unavailable: '+e.message;console.warn('Chapter 04:',e);}
+              finally{loading=false;}
+            }
+            function draw(){
+              if(!map)return;layer.clearLayers();const bounds=[];
+              // A single marker per named park, even if multiple survey posts share that park.
+              const groups=new Map();
+              for(const p of posts){
+                if(select.value&&p.type!==select.value)continue;
+                const c=p.coords;
+                if(!c||!c.every(Number.isFinite)||c[0]<1.1||c[0]>1.55||c[1]<103.5||c[1]>104.2)continue;
+                // "Other" is a survey option, not a specific park; avoid merging unrelated sites.
+                const key=norm(p.park)==='other'||norm(p.park)==='park not identified'?'unknown-'+p.id:norm(p.park);
+                if(!groups.has(key))groups.set(key,[]);
+                groups.get(key).push(p);
+              }
+              for(const group of groups.values()){
+                const p=group[0];
+                const c=[group.reduce((sum,x)=>sum+x.coords[0],0)/group.length,group.reduce((sum,x)=>sum+x.coords[1],0)/group.length];
+                const marker=L.circleMarker(c,{radius:group.length>1?10:8,color:'#fff',weight:2,fillColor:'#285e4d',fillOpacity:.9}).addTo(layer);
+                // Tooltip intentionally shows only park identity and number of submissions.
+                marker.bindTooltip(esc(p.park)+' · '+group.length+' '+(group.length===1?'response':'responses'));
+                marker.on('click',()=>openPark(p,true));bounds.push(c);
+              }
+              if(bounds.length&&!map._v4HasFitted){map.fitBounds(bounds,{padding:[30,30],maxZoom:12});map._v4HasFitted=true;}
+            }
+            const points=[{key:'shade',label:'Tree shade',x:170,y:195},{key:'path',label:'Walking path',x:420,y:345},{key:'open',label:'Open space',x:620,y:245},{key:'water',label:'Waterside',x:745,y:335},{key:'rest',label:'Rest area',x:285,y:315},{key:'other',label:'Other observations',x:500,y:115}];
+                         // Hotspots from the Bishan collage prototype, mapped onto its 3:1 aspect ratio.
+             // All responses still come from the live Ushahidi posts for the selected park.
+              // Coordinates refer to the actual illustrated objects (900 x 300).
+              // Only hotspots with matching published observations are rendered.
+              const bishanPoints=[
+                {key:'shade',label:'Tree shade',x:778,y:244},
+                {key:'water',label:'Riverside',x:220,y:245},
+                {key:'open',label:'Open lawn',x:610,y:218},
+                {key:'path',label:'Walking / running path',x:350,y:268},
+                {key:'rest',label:'Shaded seating',x:791,y:270}
+              ];
+              // Illustration positions use a 900 x 300 scene coordinate system.
+              // These are approximate visual placements; confirm against the original full-resolution artwork.
+              // An environment is displayed only when a matching response exists for that park.
+              const parkArtwork={
+                'bishan-ang mo kio park':'bishan_park_cool_collage.png',
+                'clementi woods park':'clementi_woods_park.png',
+                'mount faber park':'faber_park.png',
+                'fort canning park':'fort_canning_park.png',
+                'kent ridge park':'kent_ridge_park.png',
+                'sengkang riverside park':'Sengkang_Riverside_Park.png',
+                'upper seletar reservoir park':'upper_seletar.png',
+                'war memorial park':'war_memorial_park.png',
+                'west coast park':'west_coast_park.png'
+              };
+              const artworkPoints={
+                'bishan-ang mo kio park':bishanPoints,
+                'clementi woods park':[
+                  {key:'shade',label:'Woodland shade',x:260,y:125},
+                  {key:'path',label:'Woodland path',x:470,y:247},
+                  {key:'rest',label:'Resting area',x:655,y:235},
+                  {key:'open',label:'Open clearing',x:750,y:177}
+                ],
+                'mount faber park':[
+                  {key:'shade',label:'Tree shade',x:800,y:105},
+                  {key:'path',label:'Walking path',x:650,y:258},
+                  {key:'open',label:'Open viewpoint',x:190,y:238},
+                  {key:'rest',label:'Resting area',x:320,y:220}
+                ],
+                'fort canning park':[
+                  {key:'shade',label:'Tree shade',x:720,y:130},
+                  {key:'path',label:'Walking path',x:450,y:245},
+                  {key:'open',label:'Open lawn',x:330,y:195},
+                  {key:'rest',label:'Resting area',x:650,y:245}
+                ],
+                'kent ridge park':[
+                  {key:'shade',label:'Woodland shade',x:225,y:135},
+                  {key:'path',label:'Walking trail',x:480,y:250},
+                  {key:'rest',label:'Resting area',x:720,y:215},
+                  {key:'open',label:'Open viewpoint',x:610,y:140}
+                ],
+                'sengkang riverside park':[
+                  {key:'water',label:'Riverside',x:170,y:232},
+                  {key:'path',label:'Boardwalk',x:680,y:182},
+                  {key:'rest',label:'Viewing deck',x:305,y:185},
+                  {key:'shade',label:'Tree shade',x:820,y:122},
+                  {key:'open',label:'Open riverside',x:535,y:145}
+                ],
+                'upper seletar reservoir park':[
+                  {key:'water',label:'Reservoir edge',x:300,y:220},
+                  {key:'shade',label:'Tree shade',x:750,y:135},
+                  {key:'path',label:'Walking path',x:550,y:248},
+                  {key:'rest',label:'Resting area',x:675,y:210},
+                  {key:'open',label:'Open waterfront',x:425,y:157}
+                ],
+                'war memorial park':[
+                  {key:'open',label:'Open lawn',x:345,y:200},
+                  {key:'path',label:'Walking path',x:530,y:247},
+                  {key:'shade',label:'Tree shade',x:740,y:145},
+                  {key:'rest',label:'Resting area',x:660,y:240}
+                ],
+                'west coast park':[
+                  {key:'open',label:'Open lawn',x:355,y:190},
+                  {key:'path',label:'Walking path',x:550,y:255},
+                  {key:'shade',label:'Tree shade',x:750,y:135},
+                  {key:'rest',label:'Resting area',x:680,y:235},
+                  {key:'water',label:'Coastal edge',x:170,y:218}
+                ],
+                'other':[
+                  {key:'shade',label:'Tree shade',x:235,y:135},
+                  {key:'path',label:'Walking path',x:480,y:248},
+                  {key:'open',label:'Open space',x:620,y:185},
+                  {key:'rest',label:'Resting area',x:750,y:225},
+                  {key:'water',label:'Waterside',x:170,y:230}
+                ]
+              };
+              // Coordinates in artworkPoints use a normalized 900 x 300 image space.
+              // The actual SVG height follows each PNG's native aspect ratio.
+              // This avoids letterboxing without stretching or cropping the artwork.
+              const artworkHeights=new Map();
+              const ART_WIDTH=900, ART_HEIGHT=360; // Uniform 2.5:1 frame for every park.
+              const artworkPending=new Set();
+              function artworkKey(park){return norm(park);}
+              function illustrationFile(p){
+                const key=artworkKey(p.park);
+                return parkArtwork[key] || (p.type==='Other'?'other_park.png':null);
+              }
+              function illustrationPoints(p){return artworkPoints[artworkKey(p.park)] || (illustrationFile(p)?artworkPoints.other:points);}
+              function sceneHeight(p){return illustrationFile(p)?ART_HEIGHT:450;}
+              // Match the image's cover crop exactly. Hotspot coordinates are normalized
+              // to 900 x 300 in the ORIGINAL artwork, not the cropped display.
+              function artworkPlacement(p){
+                const file=illustrationFile(p);
+                const nativeH=artworkHeights.get(file)||300;
+                const scale=Math.max(1,ART_HEIGHT/nativeH);
+                const renderedW=ART_WIDTH*scale, renderedH=nativeH*scale;
+                const x=(ART_WIDTH-renderedW)/2;
+                // Tall portraits emphasize the foreground viewpoint/path while retaining skyline.
+                const y=-(renderedH-ART_HEIGHT)*0.65;
+                return {x,y,w:renderedW,h:renderedH,scale,nativeH};
+              }
+              function hotspotPosition(p,h){
+                if(!illustrationFile(p))return {x:h.x,y:h.y,visible:true};
+                const a=artworkPlacement(p);
+                const x=a.x+h.x*a.scale;
+                const y=a.y+(h.y/300)*a.nativeH*a.scale;
+                // Keep every response-bearing hotspot accessible even when its source
+                // illustration position falls inside the cropped portion.
+                const margin=22;
+                return {x:Math.max(margin,Math.min(ART_WIDTH-margin,x)),
+                        y:Math.max(margin,Math.min(ART_HEIGHT-margin,y)),visible:true};
+              }
+              function loadArtworkDimensions(p){
+                const file=illustrationFile(p);
+                if(!file||artworkHeights.has(file)||artworkPending.has(file))return;
+                artworkPending.add(file);
+                const img=new Image();
+                img.onload=()=>{
+                  artworkPending.delete(file);
+                  if(!img.naturalWidth||!img.naturalHeight)return;
+                  artworkHeights.set(file,900*img.naturalHeight/img.naturalWidth);
+                  if(selected&&illustrationFile(selected)===file)openPark(selected,false);
+                };
+                img.onerror=()=>{artworkPending.delete(file);console.warn('Chapter 04 artwork missing:',file);};
+                img.src='assets/'+encodeURIComponent(file);
+              }
+              function isBishan(p){return artworkKey(p.park)==='bishan-ang mo kio park';}
+              function sceneMarkup(p){
+                const file=illustrationFile(p);
+                if(file){
+                  // File names are case-sensitive. Keep all PNGs inside the existing assets folder.
+                  const safe=encodeURIComponent(file);
+                  const a=artworkPlacement(p);
+                  return `<image href="assets/${safe}" x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" preserveAspectRatio="none"/>`;
+                }
+const type=p.type, n=norm(p.park), woodland=/Woodland/.test(type), coast=/Coastal/.test(type), waterfront=/Waterfront/.test(type), urban=/Urban Core/.test(type), community=/Community/.test(type);
+              const seed=[...n].reduce((a,c)=>a+c.charCodeAt(0),0), shift=seed%65;
+              const tree=(x,y,r)=>`<g><path d="M${x} ${y+105}V${y}" stroke="#78654e" stroke-width="16"/><circle cx="${x}" cy="${y}" r="${r}" fill="#648c71"/><circle cx="${x-19}" cy="${y-14}" r="${r*.65}" fill="#85a88a"/></g>`;
+              const trees=woodland?[tree(120,170,83),tree(250,130,95),tree(370,170,78),tree(760,160,88)]:[tree(140+shift,165,68),tree(760-shift,160,70)];
+              const buildings=urban?'<g fill="#b9b9ad"><rect x="525" y="70" width="95" height="180"/><rect x="635" y="35" width="105" height="215"/><rect x="760" y="95" width="80" height="155"/></g>':'';
+              const water=(waterfront||coast)?`<path d="M585 285 Q725 ${275+shift} 900 285 V450 H580Z" fill="${coast?'#b4d6d8':'#9bc4c4'}"/>`:'';
+              const hill=woodland?'<path d="M0 285 Q250 75 475 270 T900 250 V450 H0Z" fill="#91ae91"/>':'<path d="M0 290 Q240 190 440 265 T900 260 V450 H0Z" fill="#b0c4a6"/>';
+              const feature=community?'<g><rect x="615" y="265" width="115" height="12" fill="#aa8669"/><path d="M630 265V220H715V265" fill="none" stroke="#806a50" stroke-width="9"/></g>':urban?'<path d="M80 350H820" stroke="#d8cbbb" stroke-width="95"/>':'';
+              const special=n.includes('war memorial')?'<path d="M600 295L625 95L645 295Z" fill="#e8e4d7" stroke="#aaa99f" stroke-width="3"/>':n.includes('upper seletar')?'<g fill="#c7d6c7"><rect x="640" y="225" width="72" height="72"/><path d="M628 225L676 187L724 225Z"/></g>':n.includes('fort canning')?'<path d="M500 285Q555 220 610 285" stroke="#c8b59b" stroke-width="28" fill="none"/>':'';
+              return `<rect width="900" height="450" fill="#e7ede3"/><rect width="900" height="230" fill="#e5ede8"/>${buildings}${hill}<path d="M0 360 Q210 270 450 340 T900 360 V450 H0Z" fill="#84a68e"/>${water}<path d="M0 432 Q265 305 465 338 T900 405" fill="none" stroke="#f0e5ca" stroke-width="65"/>${feature}${trees.join('')}${special}<g stroke="#435b4f" stroke-width="7" stroke-linecap="round" fill="none"><circle cx="450" cy="275" r="11" fill="#cfa88e" stroke="none"/><path d="M450 291V330M450 302L427 321M450 302L471 318M450 330L432 363M450 330L468 359"/></g>`;
+            }
+            // Assign each published submission to exactly ONE hotspot in its park.
+            // Prefer a specific location/activity over broad conditions such as shade.
+            // Never infer an exact position from the marker's coordinates.
+            function hotspotAssignments(park){
+              const parkPost=posts.filter(p=>norm(p.park)===norm(park));
+              const spots=illustrationPoints({park,type:parkTypes[norm(park)]??'Other'});
+              const available=new Set(spots.map(h=>h.key));
+              const buckets=new Map(spots.map(h=>[h.key,[]]));
+              const priority=['water','rest','path','shade','open','other'];
+              for(const post of parkPost){
+                const tags=new Set(post.tags||[]);
+                // Specific descriptions of tree shade belong to the shade hotspot,
+                // not also to a seating hotspot unless seating is explicitly reported.
+                const chosen=priority.find(key=>available.has(key)&&tags.has(key));
+                if(chosen)buckets.get(chosen).push(post);
+              }
+              return buckets;
+            }
+            function matchingResponses(h,park){
+              return hotspotAssignments(park).get(h.key)||[];
+            }
+            let hoverHideTimer=null;
+            function cancelHoverHide(){if(hoverHideTimer!==null){clearTimeout(hoverHideTimer);hoverHideTimer=null;}}
+            function scheduleHoverHide(){
+              cancelHoverHide();
+              if(!locked)hoverHideTimer=setTimeout(()=>{if(!locked)popup.hidden=true;},180);
+            }
+            function showPopup(h,point,sticky=false){
+              if(!selected)return;
+              const list=matchingResponses(h,selected.park);
+              if(!list.length){popup.hidden=true;return;}
+              cancelHoverHide();
+              // The park name is already displayed in the illustration header.
+              let html=`<strong>${esc(h.label)}</strong>`;
+              for(const p of list){
+                const plain=String(p.desc||'').replace(/<[^>]*>/g,' ').trim();
+                html+=`<p>“${esc(plain||p.title||'No narrative provided')}”</p><small>${esc(p.title||'Observation')}${p.comfort?' · Comfort: '+esc(p.comfort):''}${p.sensation?' · Sensation: '+esc(p.sensation):''}${p.activity?' · Activity: '+esc(p.activity):''}${p.shade?' · Shade: '+esc(p.shade):''}${p.heatEffect?' · Heat changed use: '+esc(p.heatEffect):''}${p.adaptation?' · Adaptation: '+esc(p.adaptation):''}</small>${p.comments?'<p>'+esc(p.comments)+'</p>':''}`;
+              }
+              popup.innerHTML=html;
+              popup.hidden=false;
+              popup.scrollTop=0;
+              locked=sticky;
+              const position=hotspotPosition(selected,point);
+              const x=position.x/900*wrap.clientWidth;
+              const y=position.y/sceneHeight(selected)*wrap.clientHeight;
+              const maxX=Math.max(8,wrap.clientWidth-popup.offsetWidth-8);
+              const maxY=Math.max(8,wrap.clientHeight-popup.offsetHeight-8);
+              popup.style.left=Math.max(8,Math.min(x+16,maxX))+'px';
+              // Prefer above the marker, but place below if the popup would be clipped.
+              const above=y-popup.offsetHeight-18;
+              const desiredY=above>=8?above:y+20;
+              popup.style.top=Math.max(8,Math.min(desiredY,maxY))+'px';
+            }
+            function openPark(p,scroll){
+              selected=p;workspace.hidden=false;locked=false;popup.hidden=true;
+              document.getElementById('v4-park-name').textContent=p.park;
+              document.getElementById('v4-type').textContent=p.type;
+              loadArtworkDimensions(p);
+               svg.setAttribute('viewBox','0 0 900 '+sceneHeight(p));
+              svg.innerHTML=sceneMarkup(p);
+              const group=document.createElementNS('http://www.w3.org/2000/svg','g');svg.append(group);
+              for(const h of illustrationPoints(p)){
+                if(!matchingResponses(h,p.park).length)continue;
+                const pos=hotspotPosition(p,h);
+                const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class','v4-hotspot');g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label','Read '+h.label+' observations');
+                const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('cx',pos.x);circle.setAttribute('cy',pos.y);circle.setAttribute('r',illustrationFile(p)?10:20);
+                g.append(circle);g.addEventListener('mouseenter',()=>{cancelHoverHide();if(!locked)showPopup(h,h);});
+                g.addEventListener('mouseleave',scheduleHoverHide);
+                g.addEventListener('focus',()=>showPopup(h,h));g.addEventListener('click',()=>showPopup(h,h,true));
+                g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showPopup(h,h,true);}});
+                group.append(g);
+              }
+              if(scroll)workspace.scrollIntoView({behavior:'smooth',block:'nearest'});
+            }
+            popup.addEventListener('mouseenter',cancelHoverHide);
+            popup.addEventListener('mouseleave',scheduleHoverHide);
+            popup.addEventListener('wheel',e=>{e.stopPropagation();},{passive:true});
+            wrap.addEventListener('mouseleave',scheduleHoverHide);
+            wrap.addEventListener('click',e=>{if(e.target===wrap||e.target===svg){locked=false;cancelHoverHide();popup.hidden=true;}});
+            document.addEventListener('keydown',e=>{if(e.key==='Escape'){locked=false;cancelHoverHide();popup.hidden=true;}});
+            function init(){
+              if(!window.L){status.textContent='Map library could not load.';return;}
+              map=L.map('v4-map',{scrollWheelZoom:true}).setView([1.3521,103.8198],11);
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+              layer=L.layerGroup().addTo(map);load();setInterval(load,60000);
+            }
+            select.addEventListener('change',()=>{draw();workspace.hidden=true;selected=null;popup.hidden=true;});
+            document.getElementById('v4-refresh').addEventListener('click',load);
+            const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.append(css);
+            if(window.L)init();else{const script=document.createElement('script');script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';script.onload=init;script.onerror=()=>status.textContent='Could not load Leaflet.';document.head.append(script);}
+          })();
+          </script>
+        </article>
+      </div>
+    </section>
+    <section class="reflection section" id="reflection">
+      <div class="section-number">WHAT THE STORY TELLS US</div>
+      <div class="reflection-grid">
+        <h2>Beyond the map.<br><em>Into experience.</em></h2>
+        <div>
+          <p>The temperature and landscape maps show how conditions vary across Singapore. Reviews show what people chose to write about. Survey responses describe how individual visits felt.</p>
+          <p>For parks with survey responses, read an account alongside the other maps. Each response reflects the conditions and activities of one visit.</p>
+        </div>
+      </div>
+      <div class="reflection-outcomes">
+        <div><span>MEASURED CONDITIONS</span><p>Where surface heat and greenery vary across Singapore.</p></div>
+        <div><span>REVIEW THEMES</span><p>Which topics recur in reviews of different parks.</p></div>
+        <div><span>VISITOR EXPERIENCES</span><p>How respondents described heat, shade and comfort during their visits.</p></div>
+      </div>
+    </section>
+    <section class="contribute section" id="contribute">
+      <div class="section-number">PARTICIPATE / YOUR EXPERIENCE MATTERS</div>
+      <div class="contribute-grid">
+        <div>
+          <h2>How does the park<br><em>feel to you?</em></h2>
+          <p>Tell us where you were, what you were doing, and how the park felt. Your response can help ask better questions about heat, shade and everyday park use alongside the environmental data.</p><a class="button dark" href="https://singaporeparks.ushahidi.io/post/create/2"
+            target="_blank" rel="noopener noreferrer">Open the survey ↗</a>
+        </div>
+        <div class="quote">“A temperature map can show conditions. People can tell us how those conditions are lived.”
+        </div>
+      </div>
+    </section>
+    <section class="methods section" id="methods">
+      <div class="section-number">ABOUT THE DATA </div>
+      <h2>What we know.<br><em>What we don't.</em></h2>
+      <div class="method-grid">
+        <div><b>01 · Air temperature</b>
+          <p>Historical air-temperature references (2021–2024) come from station records assigned to planning areas, not measurements inside every park. The live NEA layer checks for updated station readings every five minutes while open, showing observation times and labelling any saved fallback.</p>
+        </div>
+        <div><b>02 · Spatial context</b>
+          <p>Land surface temperature (LST; 2021–2025, 150 m) describes surface heat, while NDVI, NDBI and VBS (2021–2025, 20 m) describe vegetation and built-surface signals. The atlases share 48 matched park boundaries, with 45 heat scores and 37 VBS scores. These indicators do not directly measure shade or comfort.</p>
+        </div>
+        <div><b>03 · Public reviews</b>
+          <p>The 54-park study contains 52,419 collected review entries, including 24,189 with written text across 53 parks. The remaining listed park has no reviews. These self-selected, unevenly distributed comments reveal what some visitors mention, not representative measures of thermal comfort.</p>
+        </div>
+        <div><b>04 · Surveys & observations</b>
+          <p>Map 04 loads published survey responses with mapped locations from Ushahidi. The illustrations group accounts by the setting visitors describe, such as a shaded path or an open lawn. The map checks for updates while it is open.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/maps.js"></script>
+  <script src="js/story.js"></script>
+</body>
+
+</html>

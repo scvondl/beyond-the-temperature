@@ -49,6 +49,14 @@
     state.map.attributionControl.setPrefix('');
     state.map.attributionControl.addAttribution(
       'Boundaries: OSM / NParks · Planning areas: URA');
+
+    /* Keep the planning-area basemap in its own pane below the park polygons.
+       Both files load asynchronously; without a fixed pane, whichever finishes
+       last is drawn on top and can hide the parks. */
+    state.map.createPane('basemap');
+    const basemapPane = state.map.getPane('basemap');
+    basemapPane.style.zIndex = '350';
+    basemapPane.style.pointerEvents = 'none';
   }
 
   async function drawBasemap() {
@@ -57,6 +65,7 @@
       if (!response.ok) throw new Error('HTTP ' + response.status);
       const data = await response.json();
       L.geoJSON(data, {
+        pane: 'basemap',
         interactive: false,
         style: {
           color: '#d7e0d0', weight: 1, fillColor: '#f7f8f2', fillOpacity: 1
@@ -424,6 +433,20 @@
       }
     });
     window.addEventListener('resize', () => state.map.invalidateSize());
+
+    /* A lazy iframe can initialise before it has its final height; re-measure
+       whenever the container changes size so the map is never left blank. */
+    if (window.ResizeObserver) {
+      let pending = 0;
+      const observer = new ResizeObserver(() => {
+        if (pending) return;
+        pending = requestAnimationFrame(() => {
+          pending = 0;
+          state.map.invalidateSize();
+        });
+      });
+      observer.observe(document.getElementById('map'));
+    }
   }
 
   document.addEventListener('DOMContentLoaded', boot);
